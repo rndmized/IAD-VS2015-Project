@@ -11,10 +11,15 @@ namespace SlimesFromOuterSpace
     public class BlueSlime : EnemySlime
 
     {
+        //Creates Image Object
         Image blueSlime = new Image();
+
+        //Class Constructor
         public BlueSlime()
         {
+            //Sets Taps to 1
             taps = 1;
+            //Create tapped method for Image
             blueSlime.Tapped += BlueSlime_Tapped;
             
         }
@@ -32,6 +37,7 @@ namespace SlimesFromOuterSpace
             }
         }
 
+        #region Image handling
         public override string getDeathIcon()
         {
             String path = "ms-appx:///Assets/Images/BlueSlimeSqueezedC.png";
@@ -62,6 +68,6 @@ namespace SlimesFromOuterSpace
             blueSlime.Source = new BitmapImage(new Uri(getIcon(x)));
             return blueSlime;
         }
-    
+    # endregion
     }
 }
