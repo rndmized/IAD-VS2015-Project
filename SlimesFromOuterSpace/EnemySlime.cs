@@ -9,16 +9,17 @@ namespace SlimesFromOuterSpace
 {
    public abstract class EnemySlime
     {
-        String color;
+        //Number of taps needed to kill the mob
         public int taps;
+        
+        //Abstract Methods to be inherited
+        public abstract Image getImage(int x);//Returns Image based on position
+        public abstract Image getImage();//Returns Image regardless position
+        public abstract Image getDeathImage();//Returns image of defeated mob
+        public abstract String getIcon(int x);//Returns picture source path of mob based on position
+        public abstract String getDeathIcon();//Returns picture source path of a defeated enemy 
 
-        public abstract Image getImage(int x);
-        public abstract Image getImage();
-        public abstract Image getDeathImage();
-        public abstract String getIcon(int x);
-        public abstract String getDeathIcon();
-
-    }
+    }//end of EnemySlime Class
 
 }
 
