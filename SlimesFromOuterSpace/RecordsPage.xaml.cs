@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Graphics.Display;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -31,7 +32,7 @@ namespace SlimesFromOuterSpace
 
         public RecordsPage()
         {
-            
+            DisplayInformation.AutoRotationPreferences = DisplayOrientations.Portrait;
             this.InitializeComponent();
             btnMenu.Tapped += BtnMenu_Tapped;
             checkScore();

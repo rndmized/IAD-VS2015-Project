@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="143*"/>
             <RowDefinition Height="17*"/>
@@ -21,3 +21,4 @@
         <Button x:Name="btnMenu" Content="Return to main menu" HorizontalAlignment="Stretch" Height="34" Margin="66,0,82,10" VerticalAlignment="Bottom" Background="#FF060101" Foreground="White"/>
     </Grid>
 </Page>
+

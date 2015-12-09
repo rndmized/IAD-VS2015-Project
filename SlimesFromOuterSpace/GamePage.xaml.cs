@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Windows.Graphics.Display;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -34,6 +35,8 @@ namespace SlimesFromOuterSpace
         public GamePage()
         {
             this.InitializeComponent();
+            score = 0;
+            DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape;
             Timer = new DispatcherTimer();
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Tick += Timer_Tick;
@@ -52,14 +55,14 @@ namespace SlimesFromOuterSpace
         /*end of startTimers method*/
 
         //Spawn tick
-        private async void Spawner_Tick(object sender, object e)
+        private void Spawner_Tick(object sender, object e)
         {
-            await spawn();
+            spawn();
         }
         /*end of Spawner tick method*/
        
         //Timer tick
-        private async void Timer_Tick(object sender, object e)
+        private void Timer_Tick(object sender, object e)
         {
             
             if (time > 0)
@@ -80,21 +83,22 @@ namespace SlimesFromOuterSpace
         #endregion
         #region Spawner
         //Creates Slimes every X time
-        private async Task spawn()
+        private void spawn()
         {
                 grdGame.Children.Clear();
                 int enemyNum = rnd.Next((int)minEnemies, (int)maxEnemies);
                 for (int k = 0; k <= enemyNum; k++)
                 {
-                   await createSlime();
+                   createSlime();
                 }
             
         }
-        //end of spawn method
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+                              //end of spawn method
         #endregion
         #region Slime Creation
         //Creates Image with picture of the slime, sets it in a random location and adds it to the grid. Sets counter to 0.
-        private async Task createSlime()
+        private void createSlime()
         {
             //Creating new slime Image
             EnemySlime es;
@@ -150,7 +154,7 @@ namespace SlimesFromOuterSpace
         #region Stage
         public void nextStage()
         {
-            if (checkScore()==true)
+            if (checkScore())
             {
                 minEnemies *= difficultyIncrease+1;
                 maxEnemies *= difficultyIncrease+1;
