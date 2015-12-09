@@ -5,7 +5,10 @@
     xmlns:local="using:SlimesFromOuterSpace"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="340.034" Width="615.39">
+    mc:Ignorable="d" Height="340.034" Width="625.559">
+    <Page.Resources>
+        <JumpListItemBackgroundConverter x:Key="JumpListItemBackgroundConverter"/>
+    </Page.Resources>
 
     <Grid Margin="0,0,0.333,0">
         <Grid.Background>
@@ -20,25 +23,26 @@
                     Height="330"
                     Width="620">
             <TextBlock x:Name="tblStage" Text="Stage 1" HorizontalAlignment="Stretch" Foreground="White" TextAlignment="Center"></TextBlock>
-            <StackPanel Orientation="Horizontal" Background="Black" Height="35" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" Background="Black" Height="35" Margin="0,0,10,0" HorizontalAlignment="Right" Width="610">
                 <TextBlock x:Name="tblDisplay" 
-                   Foreground="White"
-                   HorizontalAlignment="Stretch" 
-                   Margin="10,10,10,0" 
-                   VerticalAlignment="Stretch"/>
+                           Text="Start!"
+            		Foreground="White"
+            		HorizontalAlignment="Stretch" 
+            		Margin="10,10,10,0" 
+            		VerticalAlignment="Stretch"/>
                 <TextBlock x:Name="tblScore" 
-                           Text="Score: "
-                   Foreground="White"
-                   TextAlignment="Right"
-                   HorizontalAlignment="Stretch" 
-                   Margin="10,10,10,0" 
-                   TextWrapping="Wrap" 
-                   VerticalAlignment="Stretch"/>
+                	Text="Score: " 
+                	Foreground="White"
+                	TextAlignment="Right"
+                	HorizontalAlignment="Right" 
+                	Margin="450,10,10,0" 
+                	TextWrapping="Wrap" 
+                	VerticalAlignment="Stretch" RenderTransformOrigin="8.655,0.543"/>
             </StackPanel>
             <Grid x:Name="grdGame"   
             	Height="248"
             	BorderBrush="Black"
-            	BorderThickness="2">
+            	BorderThickness="2" Margin="0,0,10,0">
                 <Grid.Background>
                     <ImageBrush Stretch="Fill" ImageSource="Assets/Images/Abomination_Background.png"/>
                 </Grid.Background>
@@ -61,7 +65,6 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
             </Grid>
-            <TextBlock x:Name="tblTest" Margin="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBlock>
         </StackPanel>
     </Grid>
 </Page>

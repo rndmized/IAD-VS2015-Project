@@ -119,14 +119,15 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <PRIResource Include="Resources.resw" />
-    <None Include="SlimesFromOuterSpace_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\Abomination_Background.png" />
     <Content Include="Assets\Images\BlueSlimeSqueezedC.png" />
     <Content Include="Assets\Images\GreenSlimeSqueezedC.png" />
+    <Content Include="Assets\Images\MainPageBackground.png" />
     <Content Include="Assets\Images\RedSlimeSplash.png" />
     <Content Include="Assets\Images\RedSlimeSqueezedC.png" />
+    <Content Include="Assets\Images\ScorePage.png" />
     <Content Include="Assets\Images\Slime1-Right.png" />
     <Content Include="Assets\Images\Slime1-RTU.png" />
     <Content Include="Assets\Images\Slime2-Right.png" />

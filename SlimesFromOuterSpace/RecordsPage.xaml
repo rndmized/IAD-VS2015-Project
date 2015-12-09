@@ -7,10 +7,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel>
-            <TextBlock x:Name="textBlock" TextAlignment="Center" HorizontalAlignment="Stretch" Margin="100" TextWrapping="Wrap" Text="Game Over" VerticalAlignment="Stretch"/>
-            <TextBlock x:Name="tblScore" Text="Score goes here" TextAlignment="Center"></TextBlock>  
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/Images/ScorePage.png"/>
+        </Grid.Background>
+        <StackPanel Margin="0,250,0,0" Height="42" VerticalAlignment="Top">
+            <TextBlock x:Name="tblScore" Text="Score goes here" TextAlignment="Center" Height="38"/>
         </StackPanel>
+        <Button x:Name="btnMenu" Content="Return to main menu" HorizontalAlignment="Stretch" Height="34" Margin="66,0,82,10" VerticalAlignment="Bottom" Background="#FF060101" Foreground="White"/>
     </Grid>
 </Page>

@@ -6,19 +6,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Uniform" ImageSource="Assets/Images/MainPageBackground.png"/>
+    </Page.Background>
+    <Page.Foreground>
+        <ImageBrush Stretch="Fill"/>
+    </Page.Foreground>
 
-    <Grid Background="Black">
-        <StackPanel Orientation="Vertical">
-            <Rectangle Fill="DarkKhaki" HorizontalAlignment="Stretch" Height="505" Margin="10,10,10,0" Stroke="Black" VerticalAlignment="Stretch"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/Images/MainPageBackground.png"/>
+        </Grid.Background>
+        <StackPanel Orientation="Vertical" Height="141" VerticalAlignment="Bottom">
             <StackPanel>
-                <Button x:Name="btnStartGame" Background = "White" Content="Start New Game"
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11,11,11,0">
+                <Button x:Name="btnStartGame" Background = "Black" Content="Start New Game"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11,11,11,0" Foreground="White" BorderBrush="#FFE4DA04">
                 </Button>
-                <Button x:Name="btnCheckRecords" Background = "White" Content="See Records"
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11,11,11,0">
+                <Button x:Name="btnCheckRecords" Background = "#FF020000" Content="See Records"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11,11,11,0" Foreground="#FFFDFDFD" BorderBrush="#FFEAF500">
                 </Button>
-                <Button x:Name="btnExit" Background = "White" Content="Exit"
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11,11,11,0">
+                <Button x:Name="btnExit" Background = "#FF020000" Content="Exit"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11,11,11,0" Foreground="#FFFDFDFD" BorderBrush="#FFEAF500" UseSystemFocusVisuals="True">
                 </Button>
             </StackPanel>
         </StackPanel>

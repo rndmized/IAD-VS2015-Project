@@ -33,10 +33,16 @@ namespace SlimesFromOuterSpace
         {
             
             this.InitializeComponent();
+            btnMenu.Tapped += BtnMenu_Tapped;
             checkScore();
             tblScore.Text = "Score: " + GamePage.score + " / Best Score: " + localSettings.Values["savedScore"];
 
 
+        }
+
+        private void BtnMenu_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         public void checkScore()
